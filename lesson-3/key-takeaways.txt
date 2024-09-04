@@ -1,0 +1,77 @@
+Git 
+
+    git log: Dùng để xem lịch sử các commit
+
+    git commit --amend: Thay đổi message commit
+        - gõ i -> vào chế độ Insert
+        - gõ Esc để thoát chế độ Insert
+        - gõ ":wq" -> write and quit
+
+    git commit --amend -m "message"
+
+    git restore --staged <file>: Đưa file từ vùng Staging về vùng Working
+
+    git reset HEAD~x (undo x commit): Đưa file từ vùng Repository về vùng Working
+
+    Branch: Nhánh dùng để làm việc trên vùng mới, không ảnh hưởng đến vùng chính
+
+    git branch <ten_branch>: Tạo một nhánh có tên là ten_branch
+
+    git check out <ten_branch>: Dùng để chuyển vào ten_branch để làm việc
+
+    git check out -b <ten_branch>: Tạo và Chuyển vào nhánh có tên là ten_branch
+
+    .gitignore = GitIgnore: Bỏ qua - Dùng để bỏ qua các file không cần Git theo dõi
+
+Javascript
+    Conventions
+        snake_case: chưa dùng 
+        kebab-case: tên file
+        camelCase: tên biến
+        PascalCase: tên class
+    
+    console.log với ' và "
+        console.log("Toi la Thoai");
+        console.log('Toi la Duong Thoai');
+
+        let name = "Thoai";
+        console.log('Toi la ${name}');
+        console.log("Toi la" + name +" ");
+
+    Object: đối tượng, dùng để lưu trữ tập hợp các giá trị vào cùng một biến hoặc hằng số.
+        let/const <ten_object> = {
+            <thuoc_tinh>: <gia_tri>,    <thuoc_tinh>: giống quy tắc đặt tên biến
+            ...                         <gia_tri>: có kiểu giống biến hoặc là 1 object khác.
+        }
+
+        ViDu:
+            let/const thongtin = {
+                ho: "Au",
+                tenlot: "Duong",
+                ten: "Thoai",
+                tuoi: 22
+            }
+
+            let/const truonghoc = {
+                tentruong: "Dai Hoc Can Tho",
+                matruong: "CTU",
+                diachi: {
+                    so: "1",
+                    tenduong: "3 thang 2",
+                    quan: "Ninh Kieu"
+                }
+            }
+
+        Gán lại:
+            <ten_object>.<thuoc_tinh> = <gia_tri_moi>;
+
+            ViDu: thongtin.ten = Thoaiii
+    
+    Logical operator
+
+        &&: Cả 2 vế của mệnh đề đều đúng
+        ||: Môt trong hai vế đúng
+        !: Đảo ngược lại giá trị của mệnh đề
+
+        
+

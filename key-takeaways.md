@@ -4,6 +4,7 @@
     - Local: lưu trên máy
     - Centralize: Lưu ở một máy tập trung
     - Distributed: Lưu ở nhiều máy khác nhau
+
 # Git
 ## Git 
 - Là phần mềm trên máy
@@ -44,6 +45,19 @@
     - File màu *xanh*: Vùng *Staging*
 - Commit: **git commit -m "message"**
 - Kiểm tra lịch sử Commit: **git log**
+- Thay đổi message commit: **git commit --amend** 
+    - gõ i -> vào chế độ Insert
+    - gõ Esc để thoát chế độ Insert
+    - gõ ":wq" -> write and quit
+    - **git commit --amend -m "message"**
+- Đưa file từ vùng Staging về vùng Working: **git restore --staged <tên file>**
+- Đưa file từ vùng Repository về vùng Working: **git reset HEAD~x (undo x commit)**
+
+## Branch
+- Nhánh dùng để làm việc trên vùng mới, không ảnh hưởng đến vùng chính
+- Tạo một nhánh có tên là ten_branch: **git branch <ten_branch>**
+- Dùng để chuyển vào ten_branch để làm việc: **git check out <ten_branch>**
+- Tạo và Chuyển vào nhánh có tên là ten_branch: **git check out -b <ten_branch>**
 
 ## Git - Convention (Quy Tắc)
 Cú pháp: (**type** : **short_description**)
@@ -54,6 +68,14 @@ Cú pháp: (**type** : **short_description**)
 - Short_description: Mô tả ngắn gọn
 
 # Javascript basic
+
+## Convention
+Đặt tên:
+- snake_case: chưa dùng 
+- kebab-case: tên file
+- camelCase: tên biến
+- PascalCase: tên class
+
 ## Variable
 - Khai báo:
     - var <ten_bien> = <gia_tri>;
@@ -94,6 +116,11 @@ Cú pháp: (**type** : **short_description**)
 ## Arithmetic Operator
 Toán tử số học: +, -, *, /, %
 
+## Logical operator
+- &&: Cả 2 vế của mệnh đề đều đúng
+- ||: Môt trong hai vế đúng
+- !: Đảo ngược lại giá trị của mệnh đề
+
 ## Conditional
     if(<Điều kiện>) {
         //code
@@ -117,7 +144,7 @@ Vòng lặp
 Ví dụ
 
     for(let i = 1; i <= 5; i++){
-        console.log("Giá trị của i là: " i);
+        console.log("Giá trị của i là: ", i);
     }
 
 Kết quả
@@ -127,6 +154,41 @@ Kết quả
     Giá trị của i là: 3
     Giá trị của i là: 4
     Giá trị của i là: 5
+
+## Object: 
+- Đối tượng, dùng để lưu trữ tập hợp các giá trị vào cùng một biến hoặc hằng số.
+- Khai báo:
+
+        let/const <ten_object> = {
+            <thuoc_tinh>: <gia_tri>,    
+            ...                         
+        }
+    - <thuoc_tinh>: giống quy tắc đặt tên biến
+    - <gia_tri>: có kiểu giống biến hoặc là 1 object khác.
+        
+- ViDu:
+        let/const thongtin = {
+            ho: "Au",
+            tenlot: "Duong",
+            ten: "Thoai",
+            tuoi: 22
+        }
+
+        let/const truonghoc = {
+            tentruong: "Dai Hoc Can Tho",
+            matruong: "CTU",
+            diachi: {
+                so: "1",
+                tenduong: "3 thang 2",
+                quan: "Ninh Kieu"
+            }
+        }
+
+- Gán lại:
+
+        <ten_object>.<thuoc_tinh> = <gia_tri_moi>;
+        
+        ViDu: thongtin.ten = Thoaiii
 
 ### Format Code
 **Option + Shift + F**
