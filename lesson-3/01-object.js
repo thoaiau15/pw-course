@@ -32,14 +32,14 @@ console.log("3: ");
 console.log(student["grades"]["math"]);
 
 // 4
-let product = {
+let products = {
     "Tao": 5,
     "Buoi": 4,
     "Chuoi": 10
 }
 console.log("4: ");
-for(let inra in product){
-    console.log(inra);
+for(let product in products){
+    console.log(`Tên: ${product}, Giá: ${products[product]}` );
 }
 
 // 5
