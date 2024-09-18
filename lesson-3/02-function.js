@@ -22,18 +22,35 @@ BMI(1.81, 75);
 
 
 // 2
-function doC (doF) {
-    tinhDoC = (doF - 32) * 5 / 9;
-    return tinhDoC
-}
 
-function doF (doC) {
-    tinhDoF = doC * (9 / 5) + 32;
-    return tinhDoF
+// Cách 1
+// function doC (doF) {
+//     tinhDoC = (doF - 32) * 5 / 9;
+//     return tinhDoC
+// }
+
+// function doF (doC) {
+//     tinhDoF = doC * (9 / 5) + 32;
+//     return tinhDoF
+// }
+// console.log("2:")
+// console.log( doC(150) );
+// console.log( doF(65) );
+
+// Cách 2
+function chuyenNhietDo(nhietdo, donvi){
+    if( donvi === "C"){
+        return (nhietdo - 32) * 5 / 9;
+    }
+
+    if( donvi === "F"){
+        return nhietdo * (9 / 5) + 32;
+    }
 }
-console.log("2:")
-console.log( doC(150) );
-console.log( doF(65) );
+console.log("2:");
+console.log(chuyenNhietDo(15, "C"));
+console.log(chuyenNhietDo(-10, "F"));
+
 
 // 3
 function tongMang(arr){
@@ -101,13 +118,13 @@ let scores = [
     {name: "Xuyen", score: 80}
 ]
 
-function avg(scores){
+function avg(arr5){
     let tong = 0;
-    for (let i = 0; i < scores.length; i++){
-        tong = tong + scores[i].score;
+    for (let i = 0; i < arr5.length; i++){
+        tong = tong + arr5[i].score;
     }
-    let diemTb = tong/(scores.length);
-    return diemTb;
+    return tong/(arr5.length);
+    
 }
 console.log("6:");
 console.log(avg(scores));
