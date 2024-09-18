@@ -8,7 +8,7 @@ console.log("1:");
 // }
 
 // Sử dụng forEach
-arr.forEach(function(n){
+arr.forEach(n => {
     console.log(n);
 })
 
