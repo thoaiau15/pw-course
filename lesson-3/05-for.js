@@ -11,11 +11,14 @@ console.log("1:");
 let student2 = {"name": "Thoại", "age": 22, "salary": 20};
 let tong = 0;
 for(let stu in student2){
-    if(student2[stu] > 0){
+    if(typeof student2[stu] === "number"){
         tong = tong + student2[stu];
+        
     }
 }
+console.log("2:");
 console.log(tong);
+
 
 // 3
 let student1 = {"name": "Thoại", "age": 22};
