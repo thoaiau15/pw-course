@@ -122,38 +122,119 @@ Toán tử số học: +, -, *, /, %
 - !: Đảo ngược lại giá trị của mệnh đề
 
 ## Conditional
-    if(<Điều kiện>) {
-        //code
-    }
-Ví dụ
+- Điều kiện thường
 
-    if(n>0){
-        console.log("n là số dương");
-    }
+        if(<Điều kiện>) {
+            //code
+        }
+    Ví dụ
+
+        if(n>0){
+            console.log("n là số dương");
+        }
+
+- Điều kiện nâng cao
+    - if...else
+
+            if(<Điều kiện>) {
+                //code
+            } else {
+                //code
+            }
+
+    - if..else if
+
+            if(<Điều kiện>) {
+                //code
+            } else if {
+                //code
+            }
+    
+    - switch ... case
+
+            switch (<Thuộc tính>){
+                case <Giá trị>:
+                    //code
+                    break;
+                .
+                .
+                .
+                default:
+                    //code
+            }
+
 
 ## Loops
 Vòng lặp
+- for 
 
-    for(<Khởi tạo>; <Điều kiện dừng>; <Điều kiện tăng>) {
-        //code
-    }
+        for(<Khởi tạo>; <Điều kiện dừng>; <Điều kiện tăng>) {
+            //code
+        }
 
-    for(let i = n; i <= m, i++){
-        //code
-    }
-Ví dụ
+        for(let i = n; i <= m, i++){
+            //code
+        }
+    Ví dụ
 
-    for(let i = 1; i <= 5; i++){
-        console.log("Giá trị của i là: ", i);
-    }
+        for(let i = 1; i <= 5; i++){
+            console.log("Giá trị của i là: ", i);
+        }
+    Kết quả
 
-Kết quả
+        Giá trị của i là: 1
+        Giá trị của i là: 2
+        Giá trị của i là: 3
+        Giá trị của i là: 4
+        Giá trị của i là: 5
+    
+- for...in
 
-    Giá trị của i là: 1
-    Giá trị của i là: 2
-    Giá trị của i là: 3
-    Giá trị của i là: 4
-    Giá trị của i là: 5
+    Ví dụ
+
+        let student = {"name": "Thoại", "age": 22};
+        for(let stu in student){
+            console.log(`${stu}=${student[stu]}`);
+        }
+    Kết quả
+
+        name: Thoại 
+        age = 22
+
+- foreach
+
+    Ví dụ
+
+        arr = [1, 2, 3, 4];
+        arr.forEach(n => {
+            console.log(n);
+        })
+    Kết quả
+
+        1
+        2
+        3
+        4
+
+- forof
+
+    Ví dụ
+
+        const str = "Thoai";
+        for(var value of str){
+            console.log(value);
+        }
+    Kết quả
+
+        T
+        h
+        o
+        a
+        i
+
+- Vòng lặp nâng cao: break và continue
+    - **break** là thoát hẵng 
+    - **continue** là bỏ qua điều kiện đó chạy qua vòng lặp tiếp theo
 
 ## Object: 
 - Đối tượng, dùng để lưu trữ tập hợp các giá trị vào cùng một biến hoặc hằng số.
@@ -190,5 +271,73 @@ Kết quả
         
         ViDu: thongtin.ten = Thoaiii
 
+## Array
+- Khai báo: Arr = [ gt1, gt2, gt3,...]
+VD: Numbers = [1, 2, 3, 4, 5]
+- Truy xuất mảng
+    - Độ dài mảng: length -> Arr.length
+    - Lấy phần tử theo index: [0], [1], [2] -> Arr[0], Arr[1],...
+
+## Function
+- Function (hàm) là đoạn code được đặt tên và có thể tái sử dụng, thực hiện 1 nhiệm vụ hoặc 1 tính toán cụ thể.
+- Khai báo:
+
+        function <nameFunction>() {
+            // code
+        }
 ### Format Code
 **Option + Shift + F**
+
+# DOM (Document Object Model)
+
+## Cấu trúc DOM cơ bản của một trang web bao gồm các thẻ 
+- Thẻ html
+    - Thẻ head
+        - title 
+    - Thẻ body
+        - h1
+        - a
+
+## Ví dụ về element
+    Thẻ mở          Thẻ đóng
+    <option>Việt Nam</option>
+
+    Thẻ tự đóng                                 
+    <img src="image.jpg" alt="Image description"/>
+
+    <option value="usa">United States</option>
+
+    Thẻ mở                  Giá trị                     Thẻ đóng
+    <option     value=      "usa">      United States   </option>
+              Thuộc Tính                    Text
+
+## Một vài thẻ DOM thường gặp 
+- Thẻ  div (viết tắt của divide): dùng để chia các khối trong trang web
+- Thẻ h1 đến h6 (viết tắt của heading): dùng để tạo ra các header phân cấp theo thứ tự từ
+lớn đến bé.
+- Thẻ form: dùng để chứa một form thông tin.
+- Thẻ input: text, email, radio, checkbox, file, color, range, date
+- Thẻ textarea: hiển thị ô input, dạng to
+- Thẻ radio button
+- Thẻ checkbox
+- Thẻ list và dropdown
+- button
+- Thẻ table
+    - thead = table heading
+        - tr = table row = 1 dòng
+            - th: table heading: text in đậm
+    - tbody
+        - tr -> td = table data
+- Thẻ date picker
+- Thẻ slider
+- Thẻ iframe
+
+### Mô tả cấu trúc html của 1 bảng (table)
+- Thẻ table
+    - thead = table heading
+        - tr = table row = 1 dòng
+            - th: table heading: text in đậm
+    - tbody
+        - tr -> td = table data
+
+
