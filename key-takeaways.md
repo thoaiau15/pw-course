@@ -341,3 +341,17 @@ lớn đến bé.
         - tr -> td = table data
 
 
+# Selector
+
+## Xpath selector
+
+### Xpath Tuyệt đối
+- Đi dọc theo cây DOM
+    - Bắt đầu bởi 1 /
+    - Ví dụ: /html/body/div[2]/form/div/...
+- Tìm dựa vào đặc tính
+    - Bắt đầu bối 2 //
+    - Có thể sử dụng and và or
+    - Ví dụ: //input[@id="id1"]
+    - Ví dụ and/or: //input[@id="id1" and/or @type="text"]
+
