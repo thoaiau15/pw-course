@@ -49,7 +49,6 @@ test('Bài 1: Register page', async ({ page }) => {
         await expect(page.locator("//tbody//td").nth(1)).toHaveText(testData.username);
         await expect(page.locator("//tbody//td").nth(2)).toHaveText(testData.email);
     })
-    
 });
 
 
