@@ -1,4 +1,4 @@
-function BMI(c, n) {
+function calculateBMI(c, n) {
     let bmi = n / (c * c);
     if (bmi < 18.5) {
         console.log("Thiếu Cân");
@@ -13,4 +13,4 @@ function BMI(c, n) {
         console.log("Béo Phì");
     }
 };
-BMI(1.81, 75);
+calculateBMI(1.81, 75);
