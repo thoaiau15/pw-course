@@ -1,0 +1,239 @@
+1.
+git commit --amend: Dùng để chỉnh sửa commit cuối cùng
+git reset HEAD~3: Dùng để đưa 3 lần commit file từ vùng Repository về vùng Working
+
+2.
+a. Tạo thư mục lesson-8
+b. Tạo file: file1, file2, file3
+c. Chạy lệnh: git init
+branch: main 
+    - Các commit:
+
+    - Các file theo từng vùng
+        Working Directory:
+            file1, file2, file3
+        Staging:
+
+        Repository:
+
+d. Chạy lệnh: git add file1
+branch: main 
+    - Các commit:
+        
+    - Các file theo từng vùng
+        Working Directory:
+            file2, file3
+        Staging:
+            file1
+        Repository:
+
+e. Chạy lệnh: git commit -m”init project”
+branch: main 
+    - Các commit:
+        - "init project"
+    - Các file theo từng vùng
+        Working Directory:
+            file2, file3
+        Staging:
+            
+        Repository:
+            file1
+
+f. Chạy lệnh: git checkout -b feat/feature-A
+branch: main 
+    - Các commit:
+        - "init project"
+    
+branch: feat/feature-A
+    - Các commit:
+        - "init project"
+    - Các file theo từng vùng
+        Working Directory:
+            file2, file3
+        Staging:
+            
+        Repository:
+            file1
+
+g. Chạy lệnh: git add file2
+branch: main 
+    - Các commit:
+        - "init project"
+
+branch: feat/feature-A
+    - Các commit:
+        - "init project"
+    - Các file theo từng vùng
+        Working Directory:
+            file3
+        Staging:
+            file2
+        Repository:
+            file1
+
+h. Chạy lệnh: git commit -m”feat: add file2”
+branch: main 
+    - Các commit:
+        - "init project"
+
+branch: feat/feature-A
+    - Các commit:
+        - "init project"
+        - ”feat: add file2”
+    - Các file theo từng vùng
+        Working Directory:
+            file3
+        Staging:
+            
+        Repository:
+            file1, file2
+
+i. Chạy lệnh: git add file3
+branch: main 
+    - Các commit:
+        - "init project"
+
+branch: feat/feature-A
+    - Các commit:
+        - "init project"
+        - ”feat: add file2”
+    - Các file theo từng vùng
+        Working Directory:
+            
+        Staging:
+            file3
+        Repository:
+            file1, file2
+
+j. Chạy lệnh: git commit -m”feat: add file3”
+branch: main 
+    - Các commit:
+        - "init project"
+
+branch: feat/feature-A
+    - Các commit:
+        - "init project"
+        - ”feat: add file2”
+        - ”feat: add file3”
+    - Các file theo từng vùng
+        Working Directory:
+            
+        Staging:
+            
+        Repository:
+            file1, file2, file3
+
+k. Chạy lệnh: git checkout -b feat/feature-B
+branch: main 
+    - Các commit:
+        - "init project"
+        
+branch: feat/feature-A
+    - Các commit:
+        - "init project"
+        - ”feat: add file2”
+        - ”feat: add file3”
+
+branch: feat/feature-B
+    - Các commit:
+        - "init project"
+        - ”feat: add file2”
+        - ”feat: add file3”
+    - Các file theo từng vùng
+        Working Directory:
+            
+        Staging:
+            
+        Repository:
+            file1, file2, file3
+
+l. Chạy lệnh: git reset HEAD~2
+branch: main 
+    - Các commit:
+        - "init project"
+    - Các file theo từng vùng
+        Working Directory:
+            file2, file3
+        Staging:
+            
+        Repository:
+            file1
+
+branch: feat/feature-A
+    - Các commit:
+        - "init project"
+        - ”feat: add file2”
+        - ”feat: add file3”
+
+branch: feat/feature-B
+    - Các commit:
+        - "init project"
+    - Các file theo từng vùng
+        Working Directory:
+            file2, file3
+        Staging:
+            
+        Repository:
+            file1
+m. Chạy lệnh: git stash
+branch: main 
+    - Các commit:
+        - "init project"
+branch: feat/feature-A
+    - Các commit:
+        - "init project"
+        - ”feat: add file2”
+        - ”feat: add file3”
+branch: feat/feature-B
+    - Các commit:
+        - "init project"
+    - Các file theo từng vùng
+        Working Directory:
+            
+        Staging:
+            
+        Repository:
+            file1
+    
+    - Stash: 
+            file2, file3
+n. Chạy lệnh: git checkout main
+branch: main
+    - Các commit:
+       - "init project"
+    - Các file theo từng vùng
+        Working Directory:
+            
+        Staging:
+            
+        Repository:
+            file1
+        
+branch: feat/feature-A
+    - Các commit:
+        - "init project"
+        - ”feat: add file2”
+        - ”feat: add file3”
+branch: feat/feature-B
+    - Các commit:
+        - "init project"
+
+o. Chạy lệnh: git stash pop 
+branch: main
+    - Các commit:
+       - "init project"
+    - Các file theo từng vùng
+        Working Directory:
+            file2, file3 (Đưa vào từ vùng Stash)
+        Staging:
+            
+        Repository:
+            file1
+branch: feat/feature-A
+    - Các commit:
+        - "init project"
+        - ”feat: add file2”
+        - ”feat: add file3”
+branch: feat/feature-B
+    - Các commit:
+        - "init project"
