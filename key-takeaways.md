@@ -346,7 +346,7 @@ lớn đến bé.
     - tbody
         - tr -> td = table data
 
-# DOM Relation
+## DOM Relation
 - self: node hiện tại.
 - parent: cha (node phía trên trực tiếp)
 - children: con (node phía dưới trực tiếp)
@@ -394,3 +394,4 @@ lớn đến bé.
     - //h1[ends-with(text(), "đề")]
 - not
     - //h1[not(starts-with(text(), "Tiêu"))]
+
