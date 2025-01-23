@@ -362,7 +362,7 @@ lớn đến bé.
 
 ## Xpath selector
 
-### Xpath Tuyệt đối
+### Xpath Tuyệt Đối
 - Đi dọc theo cây DOM
     - Bắt đầu bởi 1 /
 - Ví dụ: /html/body/div[2]/form/div/...
