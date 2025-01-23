@@ -53,7 +53,13 @@
 - Đưa file từ vùng Staging về vùng Working: **git restore --staged <tên file>**
 - Đưa file từ vùng Repository về vùng Working: **git reset HEAD~x (undo x commit)**
 
-## Branch
+## Git: Stashing
+- Stash: lưu các công việc đang làm ở branch này vào vùng nhớ tạm.
+- Câu lệnh: **git stash**
+- Unstash: lấy các công việc đã lưu trong vùng nhớ tạm ra.
+- Câu lệnh: **git stash pop**
+
+## Git: Branch
 - Nhánh dùng để làm việc trên vùng mới, không ảnh hưởng đến vùng chính
 - Tạo một nhánh có tên là ten_branch: **git branch <ten_branch>**
 - Dùng để chuyển vào ten_branch để làm việc: **git check out <ten_branch>**
@@ -340,6 +346,17 @@ lớn đến bé.
     - tbody
         - tr -> td = table data
 
+## DOM Relation
+- self: node hiện tại.
+- parent: cha (node phía trên trực tiếp)
+- children: con (node phía dưới trực tiếp)
+- ancestor: tổ tiên 
+- descendant: hậu duệ (các node con, cháu, chắt,...)
+- sibling: anh em (node cùng cấp và cùng cha)
+- following: theo sau (các node bên tay phải)
+- preceding: phía trước (các node bên tay trái, trừ ancestor)
+- following-sibling: anh em phía sau
+- preceding-sibling: anh em phía trước
 
 # Selector
 
@@ -348,10 +365,33 @@ lớn đến bé.
 ### Xpath Tuyệt đối
 - Đi dọc theo cây DOM
     - Bắt đầu bởi 1 /
-    - Ví dụ: /html/body/div[2]/form/div/...
+- Ví dụ: /html/body/div[2]/form/div/...
+
+### Xpath Tương Đối
 - Tìm dựa vào đặc tính
     - Bắt đầu bối 2 //
     - Có thể sử dụng and và or
-    - Ví dụ: //input[@id="id1"]
-    - Ví dụ and/or: //input[@id="id1" and/or @type="text"]
+- Ví dụ: //input[@id="id1"]
+- Ví dụ and/or: //input[@id="id1" and/or @type="text"]
+
+## XPath Advance Methods
+- wildcard: * (Dò tất cả)
+    - //*[@id = "user_name"]
+- chứa thuộc tính
+    - //input[@type = "text"]
+- and và or
+    - //input[@type = "text" and/or @id = "2"]
+- innerText: text()
+    - //input[text() = "Nhập vào..."]
+- Element as attribute
+- normalize-space() (Bỏ qua những space)
+    - //input[normalize-space() = "Tiêu đề"]
+- contains (Dò chỉ cần chứa trong chuỗi)
+    - //h1[contains(text(), "Tiêu đề")]
+- starts-with
+    - //h1[starts-with(text(), "Tiêu")]
+- ends-with
+    - //h1[ends-with(text(), "đề")]
+- not
+    - //h1[not(starts-with(text(), "Tiêu"))]
 
